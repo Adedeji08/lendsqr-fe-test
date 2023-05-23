@@ -1,0 +1,65 @@
+@import './Variables';
+.flex{
+    width: 283px;
+    height: 100vh;
+}
+.sidebar__container{
+    background: $primary-color;
+    box-shadow: $box-shadow1;
+ 
+}
+.logo__container{
+    padding: 25px;
+}
+.org__switch{
+    padding: 25px;
+    display: flex;
+    color: $secondary-color;
+    .org__switch p{
+        font-size: 16px;
+        font-weight: 400;
+        color: $secondary-color;
+    }
+}
+.dashboard{
+    padding: 25px;
+    color: $secondary-color;
+    font-weight: lighter;
+}
+.dashboard a{
+    color: $secondary-color;
+   text-decoration: none;
+}
+.customers{
+    padding: 25px;
+    color: $secondary-color;
+}
+.customers p{
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.customer__link{
+    color: $secondary-color;
+    text-decoration: none;
+}
+.customer__link p{
+    color: $secondary-color;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 50px;
+}
+.customer__link span{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 50px;
+}
+.view__component{
+    width: 79%;
+    height: 100px;
+    margin-left: 400px;
+    background-color: red;
+}
+
+
+

@@ -1,0 +1,60 @@
+@import './Variables';
+
+.popUp{
+    background: $primary-color;
+    border: $border3;
+    box-shadow: $box-shadow;
+    height: 600px;
+    margin-left: 18px;
+}
+.popUp div{
+    padding: 12px;
+    font-size: 14px;
+    font-weight: $font-weight;
+    color: $secondary-color;
+    line-height: 25px;
+}
+.popUp div select{
+    width: 150px;
+    height: 40px;
+    border-radius: $border-radius1;
+    border: $border2;
+    outline: none;
+    background: $primary-color;
+}
+.popUp div select option{
+  font-size: 12px;
+  color: $secondary-color;
+  font-weight: $font-weight;
+}
+.popUp div input{
+    width: 150px;
+    height: 40px;
+    border-radius: $border-radius1;
+    border: $border2;
+    outline: none;
+    background: $primary-color;
+}
+#header__text{
+    padding-left: 15px;
+}
+.btn__div{
+    display: inline;
+   
+}
+.btn__div .user__btn{
+    border-radius: $border-radius1;
+    border: 1px solid #545F7D;
+    background-color: $primary-color;
+    width: 58px;
+    height: 40px;
+    margin-left: 10px;
+}
+.btn__div .user__btn1{
+    border-radius: $border-radius1;
+    border: $neutral;
+    background: $neutral;
+    width: 58px;
+    height: 40px;
+    margin-left: 10px;
+}

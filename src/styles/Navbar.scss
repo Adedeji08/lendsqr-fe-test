@@ -1,0 +1,72 @@
+@import './Variables';
+
+.nav__flex{
+width: 79%;
+height: 100px;
+margin-left: auto;
+background: $primary-color;
+box-shadow: $box-shadow1;
+}
+.nav__container{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+}
+.left__nav__container{
+    background-color: $primary-color;
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+    height: 40px;
+    border-radius: $border-radius1;
+    border: $border2;
+    opacity: 0.2;
+    position: absolute;
+}
+.left__nav__container input{
+    padding: 10px;
+    outline: none;
+    border: none;
+}
+.left__nav__container span{
+  background: $neutral;
+  width: 56px;
+  height: 39px;
+  border-radius: 0px 4px 04px 0px;
+  padding: 13px;
+  padding-left: 20px;
+}
+.right__nav__container{
+    display: flex;
+    margin-left: auto;
+    margin-right: 17px;
+    justify-content: space-evenly;
+ 
+}
+.right__nav__container p{
+   text-decoration: underline;
+   color: $secondary-color;
+   font-weight: 400;
+   cursor: pointer;
+  
+}
+
+@media screen and (max-width: '960px') {
+    .nav__container{
+        display: block;
+        justify-content: space-between;
+        padding: 30px;
+    }
+    .left__nav__container{
+        background-color: $primary-color;
+        display: flex;
+        justify-content: space-between;
+        width: 50px;
+        height: 40px;
+        border-radius: $border-radius1;
+        border: $border2;
+        opacity: 0.2;
+        position: absolute;
+    }
+    
+}
