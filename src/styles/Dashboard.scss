@@ -1,6 +1,7 @@
 @import './Variables';
 .dash__flex{
     margin: 50px;
+    
 }
 .dash__container{
     height: 60px;
@@ -37,7 +38,7 @@
     border: $border;
     border-radius: $border-radius;
     box-shadow: $box-shadow;
-    height: 640px;
+    height: 100%;
     // padding: 20px;
    }
    table{
@@ -47,7 +48,7 @@
     padding: 20px;
     // text-align: center;
     font-weight: $font-weight1;
-    font-size: 12px;
+    font-size: 10px;
     color: $secondary-color;
     cursor: pointer;
 }
@@ -55,10 +56,11 @@ td{
     padding-left: 20px;
     // text-align: center;
     font-weight: $font-weight2;
-    font-size: 12px;
+    font-size: 10px;
     color: $secondary-color;
     border-bottom: $border1;
     height: 62px;
+    cursor: pointer;
 }
 
    @media screen and (max-width:'960px'){

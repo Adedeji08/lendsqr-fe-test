@@ -1,31 +1,59 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { ChangeEventHandler } from "react";
 import "../../styles/Login.scss";
 import LoginImg from "../../assets/pablo-sign-in-1.svg";
 import Icon from "../../assets//Group.svg";
-import { useDispatch } from "react-redux";
-import { login } from "../../features/userSlice";
+import { Link } from "react-router-dom";
+
 
 const Login = () => {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('')
+  const [isLoading, setIsLoading] = useState(false);
+  // const { email, password } = formData;
+  const [errorMessage, setErrorMessage] = useState("");
+    
     const [viewPassword, setViewPassword] = useState('')
 
-    const handlePwdSubmit = () => {
-      setViewPassword((previousValue): any => !previousValue);
-    }
-    
-    const dispatch = useDispatch()
-    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-        event.preventDefault();
+  // const handleInputChange = (event: any) => {
+  //   const { name, value } = event.target;
+  //   setformData({ ...formData, [name]: value });
+  // };
+  const handleShowPassword = () => {
+    setViewPassword((previousValue): any => !previousValue);
+};
 
-       dispatch(
-        login({
-          email: email,
-          password: password,
-          loggedIn: true
-        })
-       )
-    }
+
+    // const handleLoginSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    //   event.preventDefault();
+    //   if (!email || !password) {
+    //     setErrorMessage("All fields are required!");
+    //     return;
+    //   }
+  
+    //   // if (!validateEmail(email)) {
+    //   //   setErrorMessage("Please enter a valid email address!");
+    //   //   return;
+    //   // }
+    //   const response = { email, password };
+    //   console.log(response,'response')
+    //   setIsLoading(true);
+    //   try {
+    //     const data = await LoginUser(response);
+    //     console.log('mydata',data)
+    //     await dispatch(SET_LOGIN(true));
+    //     await dispatch(SET_NAME(data?.data));
+    //     setIsLoading(false);
+    //     // navigate("/credit");
+    //   } catch (error:(any)) {
+    //     const message =  error.response.data.message || error.message || error.toString();
+    //     setErrorMessage(message);
+    //   setIsLoading(false);
+    //   setformData(initialState);
+    //   }
+    // }
+   
+
+    
+
   return (
     <div>
       <div className="container">
@@ -36,30 +64,26 @@ const Login = () => {
         </div>
         {/* Right */}
         <div className="right__container">
-            <form className="login__form" onSubmit={(e) => handleSubmit(e)}> 
+            <form className="login__form"  > 
             <h1>Welcome!</h1>
             <p>Enter details to login.</p>
                 <div className="input__email">
                     <input
-                    id="input__id"
                     type="email"
+                    id="email"
                     placeholder="Email"
                     required
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
                     />
                 </div><br/> <br/>
                 <div className="input__email">
                     <input
-                    id="input__id"
                     type={viewPassword ? 'text' : 'password'}
+                    id="email"
                     placeholder="Password"
                     required
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
                     />
                     <span
-                    onClick={handlePwdSubmit}
+                    onClick={handleShowPassword}
                     >
                       {!viewPassword ? (
                         <span>SHOW</span>
@@ -70,8 +94,11 @@ const Login = () => {
                       }
                       </span>
                 </div><br/><br/>
+                <Link to='/'>
                 <button className="btn" type="submit" >LOG IN</button>
+                </Link>
             </form>
+            
         </div>
       </div>
     </div>
