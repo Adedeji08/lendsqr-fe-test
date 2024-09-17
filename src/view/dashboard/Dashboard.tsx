@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Dispatch, useMemo } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import "../../styles/Dashboard.scss";
 import Icon from "../../assets/dash/icon.svg";
 import Icon1 from "../../assets/dash/icon (1).svg";
@@ -10,7 +10,6 @@ import axios from "axios";
 import Moment from "react-moment";
 import { useParams } from "react-router-dom";
 import Pagination from 'react-js-pagination';
-import {useSelector} from 'react-redux';
 
 
 const Dashboard = () => {
@@ -42,19 +41,7 @@ const Dashboard = () => {
       const lastPageIndex = firstPageIndex + itemsCountPerPage;
       return users.slice(firstPageIndex, lastPageIndex);
     }, [currentPage]);
-    console.log(currentTableData, 'currentTableData')
 
-  // USER WITH LOANS
-  // let sum = [0];
-  // for (let i = 0; i < users[i]?.education?.loanRepayment.length; i++) {
-  //   sum[i] =+ users[i]?.education?.loanRepayment;
-  //   console.log("allsum", sum);
-  // }
-  // let usersWithLoans = sum.reduce(
-  //   (accumulator: number, currentValue: number) => accumulator + currentValue
-  // );
-
-  // USERS WITH SAVINGS
 
   console.log('idan', users)
   let usersWithSavings = 0;

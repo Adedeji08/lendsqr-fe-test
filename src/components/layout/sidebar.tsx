@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import "../styles/Sidebar.scss";
-import Logo from "../assets/Group.svg";
-import Home from "../assets/home-1.svg";
-import { customers } from "./SidebarData";
-import { business } from "./SidebarData";
-import { settings } from "./SidebarData";
-import Org from "../assets/Buz/briefcase 1.svg";
-import { NavLink, Link } from "react-router-dom";
+import "../../styles/Sidebar.scss";
+import Logo from "../../assets/Group.svg";
+import Home from "../../assets/home-1.svg";
+import { customers } from "../SidebarData";
+import { business } from "../SidebarData";
+import { settings } from "../SidebarData";
+import Org from "../../assets/Buz/briefcase 1.svg";
+import {  Link } from "react-router-dom";
 
 const Sidebar = () => {
   const [customersVisibility, setCustomersVisibility] = useState(false);

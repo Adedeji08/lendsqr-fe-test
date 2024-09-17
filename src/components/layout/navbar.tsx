@@ -1,9 +1,9 @@
 import React, {useState} from "react";
-import "../styles/Navbar.scss";
-import Search from "../assets/nav/Vector.svg";
-import Notify from "../assets/nav/np_notification_2425223_000000 1.svg";
-import ArrowDown from "../assets/nav/np_dropdown_615120_000000 1.svg";
-import User from "../assets/nav/avatar.svg";
+import "../../styles/Navbar.scss";
+import Search from "../../assets/nav/Vector.svg";
+import Notify from "../../assets/nav/np_notification_2425223_000000 1.svg";
+import ArrowDown from "../../assets/nav/np_dropdown_615120_000000 1.svg";
+import User from "../../assets/nav/avatar.svg";
 import { Link } from "react-router-dom";
 
 const Navbar = (props: any) => {
